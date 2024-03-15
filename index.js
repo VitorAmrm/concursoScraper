@@ -6,8 +6,8 @@ const cheerio = require('cheerio');
 
 
 var app = express()
-const bot = new Telegraf("6737661380:AAFrT233tOn6HVlwl1CIXCaTTISp9yYOb7c");
-const cron = "* 5 * * * *"
+const bot = new Telegraf(process.env.TOKEN);
+const cron = process.env.CRON || "* 5 * * * *"
 var qtt = 0;
 
 app.listen(3000, () => {
